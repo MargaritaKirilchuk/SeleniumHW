@@ -1,3 +1,5 @@
+package ru.netology.web;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -40,28 +42,30 @@ public class AppOrderTest {
         assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", text.trim());
     }
 
+    //bug
     @Test
-    void shouldSubmitRequestIfOnlyName() {
+    void shouldNotSubmitRequestIfOnlyName() {
         driver.get("http://0.0.0.0:7777/");
         WebElement form = driver.findElement(By.cssSelector("[action]"));
         form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Маргарита");
         form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79062762202");
         form.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         form.findElement(By.cssSelector("[role=button]")).click();
-        String text = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText();
-        assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", text.trim());
+        String text = driver.findElement(By.cssSelector(".input_type_text .input__sub")).getText();
+        assertEquals("Поле обязательно для заполнения", text.trim());
     }
 
+    //bug
     @Test
-    void shouldSubmitRequestIfOnlySurname() {
+    void shouldNotSubmitRequestIfOnlySurname() {
         driver.get("http://0.0.0.0:7777/");
         WebElement form = driver.findElement(By.cssSelector("[action]"));
         form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Кирильчук");
         form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79062762202");
         form.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         form.findElement(By.cssSelector("[role=button]")).click();
-        String text = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText();
-        assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", text.trim());
+        String text = driver.findElement(By.cssSelector(".input_type_text .input__sub")).getText();
+        assertEquals("Поле обязательно для заполнения", text.trim());
     }
 
     @Test
