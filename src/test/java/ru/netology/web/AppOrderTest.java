@@ -26,7 +26,7 @@ public class AppOrderTest {
             System.setProperty("webdriver.chrome.driver", ".\\driver\\windows\\chromedriver.exe");
         }
         options = new ChromeOptions();
-//        options.addArguments("--headless");
+        options.addArguments("--headless");
     }
 
     @BeforeEach
