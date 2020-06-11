@@ -1,5 +1,7 @@
 image: Ubuntu1804  # образ для сборки
 
+stack: jdk 11  # версия JDK
+
 branches:
   only:
     - master  # ветка git
