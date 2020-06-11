@@ -1,4 +1,5 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/muqskp5e3wtjahcr?svg=true)](https://ci.appveyor.com/project/MargaritaKirilchuk/seleniumhw-on3ig)
+[![Build status](https://ci.appveyor.com/api/projects/status/b5lap4108d7ddw2o/branch/master?svg=true)](https://ci.appveyor.com/project/andrew-pahomov/seleniumhw/branch/master)
+
 # App-order
 
 # Название проекта
