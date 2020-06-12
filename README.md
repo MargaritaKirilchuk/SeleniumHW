@@ -1,4 +1,4 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/muqskp5e3wtjahcr?svg=true)](https://ci.appveyor.com/project/MargaritaKirilchuk/seleniumhw-on3ig)
+[![Build status](https://ci.appveyor.com/api/projects/status/ei7vbni2halbib06?svg=true)](https://ci.appveyor.com/project/MargaritaKirilchuk/seleniumhw)
 # App-order
 
 # Название проекта
